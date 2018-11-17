@@ -9,6 +9,10 @@ gem 'rails', '~> 5.2.1'
 group :development do
   gem 'sqlite3'
 end
+group :production do
+  gem 'pg'
+end
+
 #File upload for rails (for pictures)
 gem 'carrierwave'
 # Use Puma as the app server
@@ -60,10 +64,6 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-end
-
-group :production do
-  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
